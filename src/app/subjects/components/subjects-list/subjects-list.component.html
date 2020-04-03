@@ -1,0 +1,9 @@
+<mat-progress-bar  *ngIf="(subjects$ | async).isLoading; else elseBlock" mode="indeterminate"></mat-progress-bar>
+
+<ng-template #elseBlock>
+  <nav class="items">
+    <app-subject-button *ngFor="let subject of (subjects$ | async).data" [subject]="subject"></app-subject-button>
+  </nav>
+  <a mat-fab class="addItem" matTooltip="Add new subject" routerLink="/subjects/addSubject">+</a>
+</ng-template>
+

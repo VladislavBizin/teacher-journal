@@ -1,0 +1,23 @@
+
+<mat-progress-bar  *ngIf="(students$ | async).isLoading; else elseBlock" mode="indeterminate"></mat-progress-bar>
+
+<ng-template #elseBlock>
+  <mat-grid-list [cols]="headerGridConfig.totalColumnSize" class="header" rowHeight="3:2">
+    <mat-grid-tile *ngFor="let key of headerGridConfig.keys"
+                   [colspan]="headerGridConfig.colSizes[key]">
+      <span>{{ headerGridConfig.titleNames[key] }}</span>
+      <a *ngIf="key !== 'id'" mat-icon-button (click)="sortStudentsByKey(key)">
+        <mat-icon>swap_vert</mat-icon>
+      </a>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <app-student class="items" *ngFor="let student of (students$ | async).data; let i = index"
+               [student]="student"
+               [index]="i+1"
+               (deleteItem)="deleteStudentHandler($event)"
+  ></app-student>
+
+  <button mat-mini-fab class="addStudent" routerLink="/students/addStudent" matTooltip="Add new student">+</button>
+</ng-template>
+

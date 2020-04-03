@@ -1,0 +1,35 @@
+<form [formGroup]="studentForm">
+  <mat-form-field class="field" appearance="fill" >
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstName" placeholder="Ivan">
+    <mat-error *ngIf="studentForm.controls.firstName.invalid">{{getErrorMessage('firstName')}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastName" placeholder="Ivanov">
+    <mat-error *ngIf="studentForm.controls.lastName.invalid">{{getErrorMessage('lastName')}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="name@gmail.com">
+    <mat-error *ngIf="studentForm.controls.email.invalid">{{getErrorMessage('email')}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Address</mat-label>
+    <input matInput formControlName="address" placeholder="1 Cove Lane, Strong, Palau, 8880">
+  </mat-form-field>
+
+  <mat-form-field class="field" appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput formControlName="description"></textarea>
+  </mat-form-field>
+
+  <button class="addStudent" type="button"
+          (click)="onSubmit()"
+          [disabled]="!studentForm.valid"
+          mat-raised-button routerLink="/students">Add
+  </button>
+</form>

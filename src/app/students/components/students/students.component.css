@@ -1,0 +1,41 @@
+
+.items {
+  margin: 0 1% 1px 1%;
+}
+.header {
+  margin: 1% 1% 0 1%;
+}
+
+.header mat-grid-tile {
+  background: #535353;
+  color: white;
+  font-size: 1.7vw;
+  margin-top: 50px;
+}
+
+.mat-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: auto;
+  width: auto;
+  font-size: 2vw;
+}
+
+.mat-icon-button {
+  padding: 0;
+  min-width: 0;
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.addStudent {
+  display: block;
+  margin: 20px auto;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: #ff914c;
+  color: white;
+}
+

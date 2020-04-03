@@ -1,0 +1,13 @@
+<div class="container">
+
+  <div class="fieldsName">
+    <div *ngFor="let key of fieldsKey"><span >{{ fieldsName[key] }}</span></div>
+  </div>
+  <div class="dates">3</div>
+  <div class="items">
+    <ng-container *ngFor="let student of (subjects$ | async).students">
+      <div *ngFor="let key of fieldsKey"><span>{{ student[key] }}</span></div>
+    </ng-container>
+  </div>
+  <div class="date">4</div>
+</div>

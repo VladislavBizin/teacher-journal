@@ -1,0 +1,13 @@
+<mat-grid-list rowHeight="2:1" [cols]="tableGridConfig.totalColumnSize">
+  <mat-grid-tile colspan="1">
+    <button mat-button [matMenuTriggerFor]="afterMenu">Setting</button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>Update</button>
+      <button mat-menu-item (click)="deleteStudent()">Delete</button>
+    </mat-menu>
+  </mat-grid-tile>
+  <mat-grid-tile *ngFor="let key of tableGridConfig.keys"
+                 [colspan]="tableGridConfig.colSizes[key]">
+    {{ key === 'id' ? index : student[key] }}
+  </mat-grid-tile>
+</mat-grid-list>

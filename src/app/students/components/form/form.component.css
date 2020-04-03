@@ -1,0 +1,33 @@
+:host {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  min-width: 150px;
+  width: 25%;
+  align-items: center;
+  border: 1px solid #535353;
+  margin: 0 10px;
+
+}
+
+.addStudent {
+  font-size: 2vw;
+  min-width: 40px;
+  width: 30%;
+  line-height: 2.8vw;
+  margin-bottom: 10px;
+  color: #535353;
+  background-color: ghostwhite;
+  padding: 0;
+}
+
+.field {
+  min-width: 150px;
+  width: 100%;
+  font-size: 1.2vw;
+}

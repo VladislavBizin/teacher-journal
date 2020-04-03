@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+a {
+  margin: 5px 5px;
+  background-color: #535353;
+  color: beige;
+}
+
+.active {
+  color: #ff914c;
+}

@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-left: 20px;
+  align-items: center;
+}
+
+.languages {
+  height: 50px;
+}

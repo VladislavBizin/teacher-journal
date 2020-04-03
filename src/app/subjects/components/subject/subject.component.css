@@ -1,0 +1,38 @@
+.container {
+  display: grid;
+  grid-template-columns: minmax(25%, 35%) auto;
+  margin-top: 30px;
+  row-gap: 1px;
+  column-gap: 1px;
+  grid-template-areas: "fieldsName dates" "items date"
+}
+
+.fieldsName, .items {
+  display: grid;
+  grid-template-columns: 35% 35% 30%;
+  row-gap: 1px;
+  column-gap: 1px;
+}
+
+.fieldsName div, .items div {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  background-color: #ff914c;
+}
+
+.items div {
+  background-color: blanchedalmond;
+}
+
+.fieldsName span {
+  padding: 5px;
+  font-size: 1.5vw;
+}
+
+.items span {
+  font-size: 1.3vw;
+  padding: 5px;
+}
